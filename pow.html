@@ -35,6 +35,21 @@
 		#demo-iframe { border:6em inset; }
 		#animated h1 { margin-top:.25em; }
 		#info { text-align:center; }
+
+		/* Print styles (Firefox recommended) */
+		@media print {
+			body { background:transparent !important; }
+			#slides { overflow:visible !important; position:relative !important; }
+			#slides .slide { 
+				display:block; overflow:hidden; 
+				vertical-align: middle; 
+				height: 162mm; width: 220mm; 
+				page-break-after: always; 
+				/*page-break-before: always;*/
+				clear: both;
+			}
+			#slides .slide.intromake > h1 { margin-top: 37%; }
+		}
 	</style>
 </head>
 <body>
